@@ -1,5 +1,5 @@
 {
-    "name": "kalnoy/cruddy",
+    "name": "zenekp/cruddy",
 
     "description": "Backend interface for handling CRUD operations on your Laravel Eloquent models.",
 
