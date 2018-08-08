@@ -2,7 +2,7 @@
 
 namespace Kalnoy\Cruddy;
 
-use Symfony\Component\Translation\TranslatorInterface;
+use Illuminate\Contracts\Translation\Translator as TranslatorContract;
 
 /**
  * A class that manages translations.
@@ -12,7 +12,7 @@ class Lang
     /**
      * The translator.
      *
-     * @var \Symfony\Component\Translation\TranslatorInterface;
+     * @var TranslatorContract
      */
     protected $translator;
 
@@ -26,9 +26,9 @@ class Lang
     /**
      * Init lang.
      *
-     * @param \Symfony\Component\Translation\TranslatorInterface $translator
+     * @param TranslatorContract $translator
      */
-    public function __construct(TranslatorInterface $translator)
+    public function __construct(TranslatorContract $translator)
     {
         $this->translator = $translator;
     }
