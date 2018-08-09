@@ -35,7 +35,7 @@ class HasOne extends InlineRelation {
     {
         parent::attach($model, $parent);
 
-        $model->setAttribute($this->relation->getForeignKey(), $parent->getKey());
+        $model->setAttribute($this->relation->getForeignKeyName(), $parent->getKey());
     }
 
 }
