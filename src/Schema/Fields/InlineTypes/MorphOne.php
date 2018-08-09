@@ -35,7 +35,7 @@ class MorphOne extends HasOne {
     {
         parent::attach($model, $parent);
 
-        $model->setAttribute($this->relation->getPlainMorphType(), $this->relation->getMorphClass());
+        $model->setAttribute($this->relation->getMorphType(), $this->relation->getMorphClass());
     }
 
 }
