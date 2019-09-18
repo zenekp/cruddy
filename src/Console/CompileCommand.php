@@ -47,7 +47,7 @@ class CompileCommand extends Command {
      *
      * @return mixed
      */
-    public function fire()
+    public function handle()
     {
         $this->compiler->compile($this->argument('locale'));
 
