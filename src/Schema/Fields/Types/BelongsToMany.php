@@ -57,7 +57,7 @@ class BelongsToMany extends BasicRelation implements Filter {
         $query
             ->from($this->relation->getTable())
             ->select($connection->raw('1'))
-            ->where($this->relation->getForeignKey(), '=', $keyName)
-            ->whereIn($this->relation->getOtherKey(), $ids);
+            ->where($this->relation->getQualifiedForeignPivotKeyName(), '=', $keyName)
+            ->whereIn($this->relation->getQualifiedRelatedPivotKeyName(), $ids);
     }
 }
