@@ -38,6 +38,6 @@ class BelongsTo extends BasicRelation implements Filter {
     {
         if (empty($data)) return;
 
-        $builder->whereIn($this->relation->getQualifiedForeignKey(), explode(',', $data));
+        $builder->whereIn($this->relation->getQualifiedForeignKeyName(), explode(',', $data));
     }
 }

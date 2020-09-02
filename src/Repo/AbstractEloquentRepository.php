@@ -305,7 +305,7 @@ abstract class AbstractEloquentRepository implements Repository
      */
     protected function setBelongsTo(Model $instance, $key, $data)
     {
-        $foreignKey = $instance->$key()->getForeignKey();
+        $foreignKey = $instance->$key()->getForeignKeyName();
 
         $instance->setAttribute($foreignKey, $data ?: null);
 
