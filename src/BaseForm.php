@@ -288,7 +288,7 @@ abstract class BaseForm implements Arrayable
 
         $event = "entity.{$event}: {$this->id}";
 
-        return static::$dispatcher->fire($event, $payload, $halt);
+        return static::$dispatcher->dispatch($event, $payload, $halt);
     }
 
     /**
