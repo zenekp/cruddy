@@ -131,13 +131,17 @@ class EntityController extends Controller
 
         $model = $data->save();
 
+        $responseData = [];
+
         if ($form instanceof Entity && $action) {
-            $actionResult = $this->executeActionOnModel($form, $action, $model);
+            $responseData['actionResult'] = $this->executeActionOnModel($form, $action, $model);
         }
 
         $model = $form->extract($model);
 
-        return new JsonResponse(compact('actionResult', 'model'));
+        $responseData['model'] = $model;
+
+        return new JsonResponse($responseData);
     }
 
     /**
