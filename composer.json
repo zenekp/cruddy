@@ -15,8 +15,8 @@
     "license": "MIT",
 
     "require": {
-        "php": "^8.0.2",
-        "laravel/framework": "^9.0",
+        "php": "`^8.1`",
+        "laravel/framework": "^10.0",
         "intervention/image": "~2.0",
         "kalnoy/illuminate-menu": "~1.3"
     },
