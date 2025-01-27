@@ -68,7 +68,7 @@ abstract class Container extends Element implements \Countable, \IteratorAggrega
     /**
      * @return int
      */
-    public function count()
+    public function count() : int
     {
         return count($this->items);
     }
@@ -82,9 +82,9 @@ abstract class Container extends Element implements \Countable, \IteratorAggrega
     }
 
     /**
-     * @return \ArrayIterator
+     * @return \Traversable
      */
-    public function getIterator()
+    public function getIterator() : \Traversable
     {
         return new \ArrayIterator($this->items);
     }
