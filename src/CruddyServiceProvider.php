@@ -254,7 +254,7 @@ class CruddyServiceProvider extends ServiceProvider
     protected function registerThumbnailFactory()
     {
         $this->app->singleton('cruddy.thumbs', function (Container $app) {
-            return new ThumbnailFactory(new ImageManager(new Intervention\Image\Drivers\Gd\Driver()), $app->make('cache')->driver());
+            return new ThumbnailFactory(new ImageManager(new \Intervention\Image\Drivers\Gd\Driver()), $app->make('cache')->driver());
         });
     }
 
