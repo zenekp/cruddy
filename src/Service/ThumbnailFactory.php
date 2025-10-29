@@ -59,7 +59,7 @@ class ThumbnailFactory {
 
         if ( ! $image = $this->cache->get($key))
         {
-            $image = $this->image->make($src);
+            $image = $this->image->read($src);
 
             $image->resize($width, $height, function ($constraint)
             {

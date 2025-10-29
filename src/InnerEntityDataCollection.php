@@ -15,6 +15,11 @@ class InnerEntityDataCollection
     protected $relation;
 
     /**
+     * @var array
+     */
+    protected $items;
+
+    /**
      * @param InlineRelation $relation
      * @param InnerEntityData[] $items
      */

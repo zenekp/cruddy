@@ -88,5 +88,4 @@ abstract class Container extends Element implements \Countable, \IteratorAggrega
     {
         return new \ArrayIterator($this->items);
     }
-
 }
